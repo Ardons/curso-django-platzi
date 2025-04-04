@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Autores</title>
+</head>
+<body>
+
+    <h1>LISTA DE AUTORES:</h1>
+    
+    <ul>
+    {% for autor in authors_list %}
+        {%if autor.profile%}
+            <li>
+                {{autor.name}} website: {{autor.profile.website}}
+            </li>
+        {%else%}
+            <li>
+                {{autor.name}}
+            </li>
+        {%endif%}
+    {% endfor %}
+    </ul>
+    
+    
+</body>
+</html>
